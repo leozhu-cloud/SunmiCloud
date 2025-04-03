@@ -8,7 +8,7 @@ def notify():
     print("Received raw callback:", data.decode('utf-8'))
 
     # 记录回调内容
-    with open("callback_raw.txt", "a") as log_file:
+    with open("callback_raw.txt", "aa") as log_file:
         log_file.write(data.decode('utf-8') + "\n")
 
     return "", 200  # 返回 200 OK，不带任何 JSON 响应
