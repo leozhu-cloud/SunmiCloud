@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/notify', methods=['POST'])
 def notify():
-    data = request.data  # 获取原始回调内容
+    data = request.data  # 获取原始回调内容/
     print("Received raw callback:", data.decode('utf-8'))
 
     # 记录回调内容
