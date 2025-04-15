@@ -2,6 +2,9 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return 'Hello from AlphaZ'
 @app.route('/notify', methods=['POST'])
 def notify():
     data = request.data  # 获取原始回调内容/
