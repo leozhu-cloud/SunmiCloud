@@ -314,7 +314,7 @@ def uploadNewApp():
 # uploadNewApp()
 
 
-# updated_apk_path = '/Users/leozhu/Downloads/Leo Terminal Management-debug.apk'
+# updated_apk_path = '/Users/leozhu/Sunmi/AppStoreTesting/Leo Terminal Management-debug-1.9.apk'
 # upgradedApp = getApkInfo(updated_apk_path)
 # updated_apk_uuid = upgradedApp['uuid']
 # updated_apk_name = upgradedApp['package_name']
@@ -325,6 +325,7 @@ def uploadNewApp():
 
 # url = "https://webapi.sunmi.com/v3/dmp/appstore-jobs/public/callback/MyCallbackTesturl"
 # url = "https://cloud-api-dev.pecanpos.com/public/sunmi/review/result"
+# url = 'https://sunmicloud-production.up.railway.app/notify'
 url = 'http://127.0.0.1:5001/notify'
 headers = {
     "Content-Type": "application/json"
