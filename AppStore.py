@@ -252,7 +252,7 @@ def upgradeApp(package_name, apk_uuid):
         'update_flag': 2,
         'gray_msn_list': ['V311P1A720120'],
         'apk_uuid': apk_uuid,
-        'notify_url': 'http://127.0.0.1:5001/notify'
+        'notify_url': 'https://sunmicloud-production.up.railway.app/notify'
     }
     return httpPost('/v2/appstore/appstore/app/upgradeAppVersion', body)
 
@@ -314,34 +314,34 @@ def uploadNewApp():
 # uploadNewApp()
 
 
-# updated_apk_path = '/Users/leozhu/Sunmi/AppStoreTesting/Leo Terminal Management-debug-1.9.apk'
-# upgradedApp = getApkInfo(updated_apk_path)
-# updated_apk_uuid = upgradedApp['uuid']
-# updated_apk_name = upgradedApp['package_name']
-# updateApk = upgradeApp(updated_apk_name, updated_apk_uuid)
-# print(updateApk)
+updated_apk_path = '/Users/leozhu/Sunmi/AppStoreTesting/Leo Terminal Management-debug-1.10.apk'
+upgradedApp = getApkInfo(updated_apk_path)
+updated_apk_uuid = upgradedApp['uuid']
+updated_apk_name = upgradedApp['package_name']
+updateApk = upgradeApp(updated_apk_name, updated_apk_uuid)
+print(updateApk)
 
 
 
 # url = "https://webapi.sunmi.com/v3/dmp/appstore-jobs/public/callback/MyCallbackTesturl"
 # url = "https://cloud-api-dev.pecanpos.com/public/sunmi/review/result"
 # url = 'https://sunmicloud-production.up.railway.app/notify'
-url = 'http://127.0.0.1:5001/notify'
-headers = {
-    "Content-Type": "application/json"
-}
-
-data = {
-    "package_name": "updated_apk_name",
-    "audit_state": 1,
-    "audit_result": "",
-    "audit_type": 2
-}
-
-response = requests.post(url, headers=headers, json=data)
-
-print("Response Status Code:", response.status_code)
-print("Response Body:", response.text)
+# url = 'http://127.0.0.1:5001/notify'
+# headers = {
+#     "Content-Type": "application/json"
+# }
+#
+# data = {
+#     "package_name": "updated_apk_name",
+#     "audit_state": 1,
+#     "audit_result": "",
+#     "audit_type": 1
+# }
+#
+# response = requests.post(url, headers=headers, json=data)
+#
+# print("Response Status Code:", response.status_code)
+# print("Response Body:", response.text)
 
 
 

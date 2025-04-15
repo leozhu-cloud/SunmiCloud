@@ -18,7 +18,7 @@ def notify():
         return "", 200  # 返回 200 OK，不带任何 JSON 响应
     else:
         # 如果是 GET 请求
-        return f"<h3>最近一次收到的通知内容:</h3><pre>{latest_data}</pre>"
+        return f"<h3>The most recent notification content received:</h3><pre>{latest_data}</pre>"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001)  # 监听所有 IP，端口 5001
